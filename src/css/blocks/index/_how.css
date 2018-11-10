@@ -1,0 +1,251 @@
+.how {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 46px 0 60px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: relative;
+}
+.how__slider {
+  width: 100%;
+}
+.how__title {
+  width: 100%;
+  position: relative;
+  margin: 0 auto 74px auto;
+}
+.how__title-text {
+  width: 50%;
+  text-align: center;
+  line-height: 36px;
+  font-family: $SemiBold;
+  font-size: 2.625rem;
+  color: $text;
+  margin: 0 auto;
+  position: relative;
+}
+.how__block {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+  padding-top: 20px;
+}
+.how__block-text {
+  margin-top: 21px;
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+  font-family: $Regular;
+  color: $text;
+  font-size: 1.125rem;
+  line-height: 24px;
+}
+.how__block-text span {
+  font-family: $SemiBold;
+  margin: 0 3px 0 0;
+}
+.how__block-text span:nth-child(3) {
+  font-family: $Regular;
+}
+.how__block-text p {
+  display: inline-block;
+  margin: 0 3px 0 0;
+}
+.how__block-image {
+  border-bottom: 1px solid $green;
+  position: relative;
+  padding-bottom: 28px;
+}
+.how__block-image-number {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  color: $green;
+  border: 1px solid $green;
+  top: -15px;
+  left: 70px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: $Bold;
+  font-size: 1.25rem;
+  line-height: 28px;
+  position: absolute;
+}
+.how .swiper-pagination {
+  display: none;
+}
+.slider2 div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):after {
+  content: '';
+  background-color: $green;
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  bottom: -8px;
+  left: 3.25px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.slider2 div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  background-color: $white;
+  height: 19px;
+  bottom: -11px;
+  left: 0;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid $green;
+}
+.slider2 div.swiper-slide:nth-child(2) > div:nth-child(1) > div:nth-child(1):after,
+.slider2 div.swiper-slide:nth-child(3) > div:nth-child(1) > div:nth-child(1):after,
+.slider2 div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):after {
+  content: '';
+  background-color: $green;
+  position: absolute;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  bottom: -6px;
+  display: inline-block;
+}
+.slider2 div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):before {
+  content: '';
+  background-color: $green;
+  position: absolute;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  bottom: -6px;
+  display: inline-block;
+}
+.slider2 div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  background: url("/images/ruble.png") no-repeat;
+  display: inline-block;
+  bottom: -16px;
+  width: 21px;
+  height: 21px;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: e 1s infinite;
+          animation: e 1s infinite;
+}
+.slider2 div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 30px;
+  background-color: $white;
+  height: 30px;
+  bottom: -17px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $green;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: e 1s infinite;
+          animation: e 1s infinite;
+}
+.slider2 > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) {
+  width: 98%;
+}
+@media (min-width: 991px) {
+  .how .slider2 .swiper-slide {
+    -webkit-flex-shrink: unset;
+        -ms-flex-negative: unset;
+            flex-shrink: unset;
+  }
+}
+@media (max-width: 900px) {
+  #how {
+    border-top: 3px dashed rgba(0,190,156,0.3);
+    border-bottom: 3px dashed rgba(0,190,156,0.3);
+  }
+  .how__title {
+    margin-bottom: 25px;
+  }
+  .how__title-text {
+    width: 57%;
+    text-align: center;
+  }
+  .how__title-text-img {
+    left: -webkit-calc(50% - 65.5px);
+    left: calc(50% - 65.5px);
+    bottom: -webkit-calc(50% - 40.5px);
+    bottom: calc(50% - 40.5px);
+  }
+  .how .slider2 div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):after,
+  .how .slider2 div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):before,
+  .how .slider2 div.swiper-slide:nth-child(2) > div:nth-child(1) > div:nth-child(1):after,
+  .how .slider2 div.swiper-slide:nth-child(3) > div:nth-child(1) > div:nth-child(1):after,
+  .how .slider2 div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):after,
+  .how .slider2 div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):before,
+  .how .slider2 div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):after,
+  .how .slider2 div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):before {
+    display: none;
+  }
+  .how__block-image {
+    border-bottom: none;
+    margin-left: -webkit-calc(50% - 40px);
+    margin-left: calc(50% - 40px);
+    padding-bottom: 0;
+  }
+  .how__block-text {
+    text-align: center;
+  }
+  .how .swiper-pagination {
+    width: 100%;
+    margin-top: 35px;
+    display: block;
+  }
+  .how .swiper-pagination .swiper-pagination-bullet {
+    border: 2px solid #d1d1d1;
+    opacity: 1;
+    margin: 0 3px;
+    background: inherit;
+    width: 11px;
+    height: 11px;
+  }
+  .how .swiper-pagination .swiper-pagination-bullet-active {
+    background: $green;
+    border-color: $green;
+  }
+}

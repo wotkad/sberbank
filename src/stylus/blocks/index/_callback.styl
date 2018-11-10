@@ -1,0 +1,186 @@
+.callbackblock-bg
+	position absolute
+	left 0
+	right 0
+	top 0
+	bottom 0
+	background #f0f0f0
+.callbackblock
+	position relative
+	overflow hidden
+	padding 58px 0 63px 0
+	&__title
+		margin-bottom 41px
+		color $black
+		p
+			font-size 2rem
+			line-height 38px
+			font-family $SemiBold
+		span
+			color $green
+			border-bottom 2px solid $green
+			font-size 2rem
+			line-height 38px
+			font-family $SemiBold
+			margin-left 7px
+	&__form
+		display flex
+		&-input
+			flex-basis 30%
+			position relative
+			margin-right 15px
+			& input
+				padding 15px 0 15px 52px
+				width 100%
+				font-size 1rem
+				height 100%
+				border-radius 3px
+				border none
+				font-family $Light
+			& i
+				position absolute
+				left 20px
+				top 20px
+				display flex
+				color $white
+				font-size 12px
+				width 18px
+				border-radius 3px
+				height 18px
+				background-color $green
+				align-items center
+				justify-content center
+		&-button
+			padding 22px 32px
+			font-family $Bold
+			color $green
+			font-size 1.5rem
+			overflow hidden
+			width 278px
+			position relative
+			line-height 19px
+			display flex
+			align-items center
+			justify-content center
+			border-radius 30px
+			background-color #e3e3e3
+			cursor pointer
+			transition .3s
+			border-left none
+			border-right none
+			border-top none
+			border-bottom 3px solid $green
+			&:hover
+				box-shadow inset 0 0 15px #00ddb5
+				color $white
+				background-color $green
+			&:after
+				content: ""
+				position: absolute
+				top -50%
+				left -50%
+				right -50%
+				bottom -50%
+				background linear-gradient(to bottom,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+				transform rotateZ(60deg) translate(-5em,7.5em)
+				opacity 0
+				animation sheens 2.5s infinite
+				z-index 100
+		&-policy
+			flex-basis 37%
+			display flex
+			align-items center
+			& input
+				margin-right 9px
+				margin-left 24px
+			&-text
+				color $black
+				font-family $Light
+				a
+					margin 3px
+					color $black
+					border-bottom 1px solid $black
+					transition .3s
+					font-family $Regular
+					&:hover
+						color $black + 20%
+.checkbox
+	display none
+.checkbox-custom
+	width 20px
+	height 20px
+	border-radius 3px
+	border 2px solid #ededed
+	background $white
+	position relative
+	margin 15px
+	transition .3s
+	cursor pointer
+.checkbox-custom:hover
+	border-color $green
+.checkbox-custom
+	display inline-block
+	vertical-align middle
+	cursor pointer
+.checkbox:checked + .checkbox-custom
+	border-color $green
+	background $white
+.checkbox:checked + .checkbox-custom::before
+	content ""
+	display block
+	position absolute
+	top 0
+	right 0
+	bottom 0
+	left 0
+.checkbox:checked + .checkbox-custom::after
+	content ""
+	display flex
+	align-items center
+	justify-content center
+	width 12px
+	height 12px
+	background url(/images/check.png) 100% 100% no-repeat
+	background-size contain
+	position absolute
+	left 2px
+	top 2px
+.checkbox-custom
+	border-radius 4px
+@media(max-width: 991px)
+	#callback
+		border-top 3px dashed rgba(0,190,156,.3)
+		border-bottom 3px dashed rgba(0,190,156,.3)
+	.callbackblock
+		padding 35px 0 45px 0
+		&-image
+			display none
+		&__title
+			span
+				font-size 1.5rem
+			p
+				font-size 1.5rem
+				&:nth-child(1)
+					margin-bottom 30px
+		&__form
+			flex-wrap wrap
+			&-input
+				flex-basis calc(50% - 15px)
+				margin-bottom 15px
+			&-button
+				flex-basis 50%
+				margin-bottom 15px
+			&-policy
+				flex-basis 100%
+				.checkbox-custom
+					margin 0 15px 0 0
+				&-text
+					font-size 0.75rem
+@media(max-width: 600px)
+	.callbackblock
+		&__form
+			&-input
+				flex-basis 100%
+				margin-right 0
+			&-button
+				flex-basis 100%

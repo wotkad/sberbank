@@ -1,0 +1,47 @@
+#map
+	min-height 465px
+.full-map
+	position absolute
+	height 100%
+	width 100%
+.map
+	display inline-flex
+	position absolute
+	right 0
+	justify-content flex-end
+	&__block
+		margin-top 50px
+		height 220px
+		border 2px solid $green
+		border-radius 3px
+		background-color $white
+		box-shadow 0 0 13.5px 1.5px rgba(0, 190, 156, 0.15)
+		&-title
+			padding 16px 30px
+			display flex
+			align-items center
+			background-color $green
+			color $white
+			font-family $Bold
+			line-height 18px
+			font-size 1.125rem
+		&-text
+			color $darktext
+			font-size 1.125rem
+			line-height 24px
+			font-family $Light
+			padding 29px 29px 0 31px
+		&-phone
+			margin-top 20px
+			color $darktext
+			font-family $Bold
+			line-height 24px
+			font-size 1.125rem
+			transition .3s
+			padding 0 29px 38px 31px
+			display block
+			&:hover
+				color $darktext + 20%
+@media(max-width: 767px)
+	.map
+		right calc(50% - 140px)

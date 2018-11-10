@@ -1,0 +1,226 @@
+.examples-bg
+	position absolute
+	left 0
+	right 0
+	top 0
+	bottom 0
+.examples
+	position relative
+	padding 63px 0 106px
+	&__title
+		width 100%
+		text-align center
+		position relative
+		margin 0 auto 42px auto
+		font-size 2.625rem
+		font-family $SemiBold
+		color $white
+		line-height 38px
+		text-align center
+	&__slider
+		position relative
+		&-slide
+			padding 30px
+			width 100%
+			height 100%
+			background-color $white
+			display flex
+			&__slider
+				width 40%
+				display flex
+				align-items center
+				&-slide
+					height 400px
+					width 427px
+					&-img
+						height 100%
+			&__block
+				display flex
+				flex-wrap wrap
+				flex-basis 60%
+				padding-left 30px
+				&-title
+					color $green
+					font-size 2rem
+					line-height 38px
+					font-family $SemiBold
+					margin-bottom 20px
+					flex-basis 100%
+				&-separator
+					background-color #e0e0e0
+					height 1px
+					margin-bottom 20px
+					flex-basis 100%
+				&-desc
+					flex-basis 55%
+					display flex
+					flex-wrap wrap
+					&-title
+						font-size 1.125rem
+						color $text
+						line-height 24px
+						font-family $SemiBold
+						margin-bottom 10px
+					&-li
+						font-family $Regular
+						font-size 1.125rem
+						color $text
+						line-height 24px
+						margin-bottom 10px
+						span
+							&:nth-child(2)
+								margin-left 3px
+								font-family $Bold
+						&:nth-child(3)
+							margin-bottom 0
+					&-result
+						margin-top 23px
+						flex-basis 100%
+						margin-bottom 33px
+						span
+							&:nth-child(1)
+								font-family $SemiBold
+								font-size 1.125rem
+								line-height 24px
+								color $text
+							&:nth-child(2)
+								font-family $Bold
+								margin-left 5px
+								font-size 1.375rem
+								line-height 24px
+								color $text
+					&-img
+						width 100%
+						display flex
+						align-items center
+						img
+							height 65px
+						a
+							font-family $SemiBold
+							font-size 1rem
+							margin 0 15px
+							line-height 28px
+							color $green
+							border-bottom 2px dashed $green
+				&-info
+					flex-basis 45%
+					border 1px solid $green
+					&-title
+						padding 15px 20px
+						background-color $green
+						p
+							font-family $Light
+							font-size 1.125rem
+							color $white
+							line-height 34px
+						span
+							font-family $Bold
+							font-size 1.5rem
+							color $white
+							line-height 34px
+							border-radius 5px
+							padding 2px 4px
+							border 2px solid $white
+					&-desc
+						padding 17px 20px
+						&-title,
+						&-li
+							font-family $Regular
+							font-size 0.875rem
+							line-height 22px
+							color $text
+		.swiper-button-prev,
+		.swiper-button-next
+			top calc(50% - 20px)
+			background-color $green
+			border-radius 5px
+			width 40px
+			height 40px
+			background-size 10px 16px
+		.swiper-button-prev
+			background-image url(/images/left.png)
+			left -20px
+		.swiper-button-next
+			background-image url(/images/right.png)
+			right -20px
+		.swiper-pagination
+			width 100%
+			margin-top 35px
+			.swiper-pagination-bullet
+				border 2px solid #d1d1d1
+				opacity 1
+				margin 0 3px
+				background inherit
+				width 11px
+				height 11px
+				&-active
+					background $green
+					border-color $green
+@media(max-width: 1180px)
+	.examples
+		&__slider
+			.swiper-button-prev,
+			.swiper-button-next
+				display none
+			.swiper-pagination
+				display block
+				margin-top 28px
+@media(max-width: 991px)
+	.examples
+		padding 35px 0 66px
+		&__slider
+			&-slide
+				flex-wrap wrap
+				padding 0
+				display block
+				&__slider
+					flex-basis 100%
+					width 100%
+					&-slide
+						width 100%
+						height 100%
+						display flex
+						align-items center
+						justify-content center
+						&-img
+							height 400px
+							width 400px
+				&__block
+					flex-basis 100%
+					padding 0 30px 30px
+					&-title
+						margin-top 20px
+					&-desc
+						&-title, &-li
+							flex-basis 100%
+	.fotorama
+		display flex
+		justify-content center
+@media(max-width: 767px)
+	.examples
+		&__slider
+			&-slide
+				&__block
+					&-desc
+						flex-basis 100%
+						&-img
+							display none
+					&-info
+						flex-basis 100%
+.fotorama__nav-wrap
+	display flex
+	height 133px
+.fotorama__nav--thumbs .fotorama__nav__frame
+	width 100px !important
+	text-align center
+.fotorama__thumb
+	background-color inherit !important
+.fotorama__img
+	left 0 !important
+	position relative !important
+.fotorama__thumb-border
+	display none
+.fotorama__active .fotorama__img
+	border 2px solid $green
+.fotorama__stage__shaft .fotorama__img
+	border none

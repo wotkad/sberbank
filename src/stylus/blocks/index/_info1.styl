@@ -1,0 +1,65 @@
+#info1
+	background: url("/images/agsquare.png") #f9f9f9 100% 100%;
+.info1
+	display flex
+	&__block:nth-child(1)
+		border-right 1px solid rgba(0,190,156,0.25);
+	&__block
+		margin 56px 0
+		flex-basis 50%
+		display flex
+		align-items center
+		justify-content center
+		&-separator
+			display none
+		&-title
+			font-size 2rem
+			line-height 38px
+			color $black
+			font-family $SemiBold
+			margin-bottom 25px
+			width 50%
+			&:nth-child(3)
+				margin-top 39px
+@media(max-width: 991px)
+	#info1
+		border-top 3px dashed rgba(0,190,156,.3)
+		border-bottom 3px dashed rgba(0,190,156,.3)
+		display flex
+		flex-direction column
+	.i1b1-overlay
+		width 100%
+	.i1b1
+		position relative
+		height 460px
+		width calc(100% - 30px)
+		margin 0 15px 35px 15px
+		order 2
+	.i1b2
+		width 100% !important
+	.i1b1
+		display none
+	.info1
+		order 1
+		flex-wrap wrap
+		&__block:nth-child(1)
+			flex-basis 100%
+			margin-bottom 0
+			border-right 0
+		&__block:nth-child(2)
+			flex-basis 100%
+			padding 35px 0 26px 0
+			margin-top 0
+		&__block
+			flex-wrap wrap
+			&-title
+				margin-bottom 14px
+				width 100%
+				text-align center
+				&:nth-child(3)
+					margin-top 15px
+			&-separator
+				display block
+				height 1px
+				background-color rgba(0,190,156,0.25);
+				width 50%

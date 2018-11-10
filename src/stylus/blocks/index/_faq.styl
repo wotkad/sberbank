@@ -1,0 +1,120 @@
+.faq-bg
+	height 100%
+	position absolute
+	top 0
+	left 0
+	bottom 0
+	right 0
+	background linear-gradient(120deg, #5d5d5d, #272727)
+.faq
+	padding 42px 0
+	display flex
+	flex-wrap wrap
+	&-image
+		position absolute
+		right 24px
+		opacity .15
+		top -39px
+	&__title
+		text-align center
+		font-family $SemiBold
+		font-size 2rem
+		line-height 38px
+		color $white
+		padding 0 25%
+		margin-bottom 40px
+		flex-basis 100%
+	&__block:nth-child(2)
+		flex-basis 60%
+	&__block:nth-child(3)
+		flex-basis 40%
+		display flex
+		flex-direction column
+		padding 0 52px
+	&__block
+		&-text
+			font-family $Regular
+			line-height 32px
+			font-size 1.5rem
+			color $white
+			padding-left 24px
+			border-left 5px solid $green
+		&-button
+			border-radius 3px
+			display flex
+			height 66px
+			width 100%
+			margin-top 22px
+			font-family $Bold
+			color $green
+			font-size 1.5rem
+			overflow hidden
+			width 278px
+			position relative
+			line-height 19px
+			display flex
+			align-items center
+			border-radius 30px
+			background-color #e3e3e3
+			cursor pointer
+			transition .3s
+			border-bottom 3px solid #019379
+			&:hover
+				box-shadow inset 0 0 15px #00ddb5
+				color $white
+				background-color $green
+			span
+				height 100%
+				&:nth-child(1)
+					background-color #019379
+					padding 8px 14px
+					flex-basis 20%
+					display flex
+					align-items center
+					justify-content center
+					border-radius 50%
+					position absolute
+					border-radius 26px
+				&:nth-child(2)
+					background-color #e3e3e3
+					justify-content center
+					padding 14px 0 14px 21px
+					font-family $SemiBold
+					font-size 1.5rem
+					line-height 33px
+					color $green
+					text-align center
+					width 100%
+					border-radius 3px
+					transition .3s
+					border-radius 33px
+			&:hover span:nth-child(2)
+				background-color #019379
+				color $white
+			&:hover img
+				transform scale(.9)
+			img
+				transition .3s
+		&-desc
+			font-family $Regular
+			color $white
+			line-height 23px
+			font-size 1rem
+@media(max-width: 1140px)
+	.faq
+		&__block
+			&:nth-child(2)
+				flex-basis 100%
+				padding 0
+			&-text
+				padding-left 14px
+			&:nth-child(3)
+				flex-basis 100%
+				padding-left 0
+				margin-top 25px
+@media(max-width: 991px)
+	#faq
+		display none
+@media(max-width: 767px)
+	.faq__title
+		padding 0

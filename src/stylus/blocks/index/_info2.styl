@@ -1,0 +1,151 @@
+.i1b1
+	position absolute
+	width calc(50% - 70px)
+	height calc(100% - 150px)
+	background url(/images/man.jpg) 50% 50% no-repeat
+	background-size cover
+	margin 0 70px 150px 0
+.i1b2
+	position absolute
+	width 50%
+	height 100%
+	right 0
+	background-color $white
+.info2
+	display flex
+	position relative
+	&__block:nth-child(1)
+		flex-basis 50%
+	&__block:nth-child(2)
+		flex-basis 50%
+		padding-left 56px
+	&__block
+		padding 56px 0
+		position relative
+		.info__border
+			background-color $white
+			height 200px
+			width 100%
+			position absolute
+			bottom 40px
+			right 0
+			left 0px
+			box-shadow 0 0 10px rgba(0,0,0,0.2)
+			.info__block
+				margin 15px
+				background-color $green
+				height calc(100% - 30px)
+				display flex
+				flex-direction column
+				justify-content center
+				padding 15px 30px
+				width calc(100% - 30px)
+				background linear-gradient(120deg, #00be9c, #00866e)
+				&-text
+					padding-bottom 35px
+					color $white
+					font-family $Bold
+					font-size 1.375rem
+					position relative
+					&:nth-child(1)
+						&:after
+							content ''
+							position absolute
+							background-color $white
+							width 25%
+							height 1px
+							display inline-block
+							left 0
+							bottom 17.5px
+					&:nth-child(2)
+						padding-bottom 0
+		&-title
+			font-family $Regular
+			line-height 32px
+			font-size 1.75rem
+			color $text
+			padding-bottom 38px
+			position relative
+		&-desc
+			margin-top 20px
+			font-family $Light
+			color $text
+			line-height 28px
+			font-size 1.125rem
+			margin-bottom 26px
+			& span
+				font-family $SemiBold
+		&-img
+			position absolute
+			left -42.5px
+			top 90px
+		&-container
+			display flex
+			flex-wrap wrap
+			&-item
+				display flex
+				flex-wrap wrap
+				flex-basis 50%
+				&-img
+					margin-right 21px
+					img
+						width 40px
+				&-title
+					font-family $Bold
+					flex-basis 70%
+					line-height 24px
+					color $text
+					font-size 1rem
+					margin-bottom 11px
+					height 48px
+				&-text
+					flex-basis 70%
+					font-family $Light
+					line-height 22px
+					font-size 0.875rem
+					color $text
+					opacity .85
+					margin-left 61px
+					margin-bottom 35px
+	div.info2__block:nth-child(2) > div:nth-child(1)
+		color $text
+		font-family $SemiBold
+		font-size 2rem
+		line-height 38px
+		margin-bottom 30px
+@media(max-width: 991px)
+	#info2
+		border-bottom 3px dashed rgba(0,190,156,.3)
+	.i2b1,
+	.i2b2
+		display none
+	.info2
+		overflow hidden
+		flex-wrap wrap
+		&__block:nth-child(1)
+			display none
+		&__block:nth-child(2)
+			flex-basis 100%
+			padding 30px 20px
+		&__block
+			&-arrow
+				display none
+			&-desc
+				margin-bottom 0
+			&-title
+				p
+					display inline-block
+			&-img
+				right -30px
+				bottom 50px
+				top auto
+				left auto
+		div.info2__block:nth-child(2) > div:nth-child(1)
+			width 100%
+@media(max-width: 600px)
+	.info2
+		margin-bottom 35px
+		&__block
+			&-container
+				&-item
+					flex-basis 100%

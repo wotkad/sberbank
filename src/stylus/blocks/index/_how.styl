@@ -1,0 +1,183 @@
+.how
+	display flex
+	padding 46px 0 60px
+	flex-wrap wrap
+	position relative
+	&__slider
+		width 100%
+	&__title
+		width 100%
+		position relative
+		margin 0 auto 74px auto
+		&-text
+			width 50%
+			text-align center
+			line-height 36px
+			font-family $SemiBold
+			font-size 2.625rem
+			color $text
+			margin 0 auto
+			position relative
+	&__block
+		flex-basis 20%
+		padding-top 20px
+		&-text
+			margin-top 21px
+			flex-basis 20%
+			font-family $Regular
+			color $text
+			font-size 1.125rem
+			line-height 24px
+			span
+				font-family $SemiBold
+				margin 0 3px 0 0
+				&:nth-child(3)
+					font-family $Regular
+			& p
+				display inline-block
+				margin 0 3px 0 0
+		&-image
+			border-bottom 1px solid $green
+			position relative
+			padding-bottom 28px
+			&-number
+				border-radius 50%
+				color $green
+				border 1px solid $green
+				top -15px
+				left 70px
+				width 30px
+				height 30px
+				display inline-flex
+				align-items center
+				justify-content center
+				font-family $Bold
+				font-size 1.25rem
+				line-height 28px
+				position absolute
+	.swiper-pagination
+		display none
+.slider2
+	div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):after
+		content ''
+		background-color $green
+		position absolute
+		left 0
+		width 15px
+		height 15px
+		bottom -8px
+		left 3.25px
+		display inline-block
+		border-radius 50%
+	div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):before
+		content ''
+		position absolute
+		width 19px
+		background-color $white
+		height 19px
+		bottom -11px
+		left 0
+		display inline-block
+		border-radius 50%
+		border 1px solid $green
+	div.swiper-slide:nth-child(2) > div:nth-child(1) > div:nth-child(1):after,
+	div.swiper-slide:nth-child(3) > div:nth-child(1) > div:nth-child(1):after,
+	div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):after
+		content ''
+		background-color $green
+		position absolute
+		left 0
+		width 9px
+		height 9px
+		border-radius 50%
+		bottom -6px
+		display inline-block
+	div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):before
+		content ''
+		background-color $green
+		position absolute
+		right 0
+		width 9px
+		height 9px
+		border-radius 50%
+		bottom -6px
+		display inline-block
+	div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):after
+		content ''
+		position absolute
+		right 0px
+		background url(/images/ruble.png) no-repeat
+		display inline-block
+		bottom -16px
+		width 21px
+		height 21px
+		animation-fill-mode: both;
+		animation: e 1s infinite;
+	div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):before
+		content ''
+		position absolute
+		right 0px
+		display flex
+		align-items center
+		justify-content center
+		border-radius 50%
+		width 30px
+		background-color $white
+		height 30px
+		bottom -17px
+		display inline-block
+		border-radius 50%
+		border 1px solid $green
+		animation-fill-mode: both;
+		animation: e 1s infinite;
+.slider2 > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)
+	width 98%
+@media(min-width: 991px)
+	.how
+		.slider2
+			.swiper-slide
+				flex-shrink unset
+@media(max-width: 900px)
+	#how
+		border-top 3px dashed rgba(0,190,156,.3)
+		border-bottom 3px dashed rgba(0,190,156,.3)
+	.how
+		&__title
+			margin-bottom 25px
+			&-text
+				width 57%
+				text-align center
+				&-img
+					left calc(50% - 65.5px)
+					bottom calc(50% - 40.5px)
+		.slider2
+			div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):after,
+			div.swiper-slide:nth-child(1) > div:nth-child(1) > div:nth-child(1):before,
+			div.swiper-slide:nth-child(2) > div:nth-child(1) > div:nth-child(1):after,
+			div.swiper-slide:nth-child(3) > div:nth-child(1) > div:nth-child(1):after,
+			div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):after,
+			div.swiper-slide:nth-child(4) > div:nth-child(1) > div:nth-child(1):before
+			div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):after,
+			div.swiper-slide:nth-child(5) > div:nth-child(1) > div:nth-child(1):before
+				display none
+		&__block
+			&-image
+				border-bottom none
+				margin-left calc(50% - 40px)
+				padding-bottom 0
+			&-text
+				text-align center
+		.swiper-pagination
+			width 100%
+			margin-top 35px
+			display block
+			.swiper-pagination-bullet
+				border 2px solid #d1d1d1
+				opacity 1
+				margin 0 3px
+				background inherit
+				width 11px
+				height 11px
+				&-active
+					background $green
+					border-color $green

@@ -1,0 +1,268 @@
+.header
+	position fixed
+	height 90px
+	width 100%
+	z-index 1
+	display flex
+	align-items center
+	transition .3s
+	z-index 999
+	padding 0 15px
+	.menu
+		display flex
+		align-items center
+		justify-content space-between
+		width 100%
+		height 90px
+		border-bottom 1px solid rgba(255,255,255,.15)
+		.menu_l
+			display flex
+			align-items center
+			&__item:nth-child(2)
+				margin-left 15px
+				display flex
+				flex-direction column
+				align-items flex-start
+				color $white
+				font-family $Regular
+			&__item
+				&-logo
+					width 150px
+					position relative
+					img
+						width 119px
+					&:after
+						content ''
+						background-color $white
+						height 46px
+						width 1px
+						position absolute
+						display inline-block
+						right 0
+						top calc(50% - 23px)
+				&-title
+					line-height 28px
+					font-size 1.25rem
+					font-family $SemiBold
+					color $white
+				&-subtitle
+					line-height 16px
+					color $white
+					font-family $Thin
+					font-size 1.125rem
+		.menu_r
+			display flex
+			align-items center
+			&__item:nth-child(1) > div:nth-child(2)
+				flex-direction column
+				display flex
+			&__item:nth-child(2)
+				display flex
+				flex-direction column
+				align-items flex-start
+				a
+					color $white
+					font-family $Regular
+					transition .3s
+					&:hover
+						color $white - 20%
+			&__item:nth-child(3)
+				display block
+				&-desc
+					display flex
+				a
+					color $white
+					font-family $Regular
+					transition .3s
+					&:hover
+						color $white - 20%
+			&__item
+				display flex
+				align-items center
+				line-height 28px
+				font-size 1.125rem
+				margin-right 44px
+				min-width 167px
+				i
+					color $green
+					margin-right 13px
+				&-desc
+					display flex
+					align-items center
+					span
+						transition .3s
+					&-contact
+						display flex
+						font-size 0.875rem
+						border-bottom 1px dashed rgba(255,255,255,.2)
+						color rgba(255,255,255,.8)
+						align-items center
+						cursor pointer
+						span
+							transition .3s
+							&:hover
+								color $white - 20%
+						i
+							margin-right 6.5px
+							color $white
+						&:nth-child(1)
+							margin-right 13px
+				span
+					color $white
+					font-family $Regular
+				&-callback
+					padding 8px 20px
+					background-color $green
+					font-family $Regular
+					line-height 26px
+					color $white
+					border-radius 3px
+					cursor pointer
+					transition .3s
+					&:hover
+						background-color $green - 20%
+			&__item:nth-child(4)
+				margin-right 0
+				width auto
+.mob__header,
+.mob__menu
+	display none
+@media(max-width: 1200px)
+	.header
+		font-size 13px
+		.menu
+			.menu_l
+				flex-basis 20%
+				flex-wrap wrap
+				&__item
+					justify-content flex-start
+					display flex
+					flex-basis 100%
+					&-logo
+						margin-left 15px
+						&:after
+							display none
+			.menu_r
+				flex-basis 80%
+				justify-content flex-end
+				&__item
+					font-size 15px
+@media(max-width: 991px)
+	.header
+		display none
+	.mob__menu
+		position fixed
+		display flex
+		transition .3s
+		height calc(100vh - 50px)
+		transform translateX(100%)
+		top 50px
+		left 0
+		right 0
+		z-index 999
+		flex-direction column
+		&-item:nth-child(1) > div:nth-child(2)
+			flex-direction column
+			display flex
+		&-item:nth-child(2)
+			display flex
+			flex-direction column
+			align-items center
+			a
+				color $white
+				font-family $Regular
+				transition .3s
+				&:hover
+					color $white - 20%
+		&-item:nth-child(3)
+			&-desc
+				display flex
+			a
+				color $white
+				font-family $Regular
+				transition .3s
+				&:hover
+					color $white - 20%
+		&-item
+			height 25%
+			display flex
+			align-items center
+			line-height 28px
+			font-size 1.125rem
+			justify-content center
+			background-color $black
+			flex-direction column
+			i
+				color $green
+				margin-right 13px
+			&-desc
+				display flex
+				align-items center
+				justify-content center
+				span
+					transition .3s
+				&-contact
+					display flex
+					font-size 0.875rem
+					border-bottom 1px dashed rgba(255,255,255,.2)
+					color rgba(255,255,255,.8)
+					align-items center
+					cursor pointer
+					span
+						transition .3s
+						&:hover
+							color $white - 20%
+					i
+						margin-right 6.5px
+						color $white
+					&:nth-child(1)
+						margin-right 13px
+			span
+				color $white
+				font-family $Regular
+			&-callback
+				padding 8px 20px
+				background-color $green
+				font-family $Regular
+				line-height 26px
+				color $white
+				border-radius 3px
+				cursor pointer
+				transition .3s
+				&:hover
+					background-color $green - 20%
+		&-item:nth-child(4)
+			margin-right 0
+			width auto
+	.mob__header
+		position fixed
+		width 100%
+		z-index 999
+		height 50px
+		background-color $black
+		display flex
+		justify-content space-between
+		&-item:nth-child(1)
+			justify-content flex-start
+			a
+				padding-left 15px
+		&-item:nth-child(2)
+			justify-content flex-end
+		&-item
+			display flex
+			flex-basis 50%
+			align-items center
+			&-logo
+				img
+					height 30px
+			&-phone
+				padding-right 15px
+				cursor pointer
+				svg
+					path
+						transition .3s
+				svg
+					&:hover path
+						fill $green
+	.active-menu
+		transform translate(0%);
