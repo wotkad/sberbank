@@ -190,7 +190,7 @@
 .examples__slider-slide__block-info-desc-li {
   font-family: $Regular;
   font-size: 0.875rem;
-  line-height: 22px;
+  line-height: 40px;
   color: $text;
 }
 .examples__slider .swiper-button-prev,
