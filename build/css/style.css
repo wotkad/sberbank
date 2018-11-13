@@ -2835,6 +2835,10 @@ section {
   background: #00be9c;
   border-color: #00be9c;
 }
+.slider3 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) .examples__slider-slide__block-info-desc-title,
+.slider3 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) .examples__slider-slide__block-info-desc-li {
+  line-height: 20px;
+}
 @media (max-width: 1180px) {
   .examples__slider .swiper-button-prev,
   .examples__slider .swiper-button-next {
