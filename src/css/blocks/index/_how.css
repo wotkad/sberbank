@@ -21,7 +21,7 @@
   width: 50%;
   text-align: center;
   line-height: 36px;
-  font-family: $SemiBold;
+  font-family: $Bold;
   font-size: 2.625rem;
   color: $text;
   margin: 0 auto;
@@ -38,7 +38,7 @@
   -webkit-flex-basis: 20%;
       -ms-flex-preferred-size: 20%;
           flex-basis: 20%;
-  font-family: $Regular;
+  font-family: $Bold;
   color: $text;
   font-size: 1.125rem;
   line-height: 24px;
@@ -65,7 +65,7 @@
   color: $green;
   border: 1px solid $green;
   top: -15px;
-  left: 70px;
+  left: 55px;
   width: 30px;
   height: 30px;
   display: -webkit-inline-box;
@@ -146,7 +146,7 @@
   right: 0px;
   background: url("/images/ruble.png") no-repeat;
   display: inline-block;
-  bottom: -16px;
+  bottom: -18px;
   width: 21px;
   height: 21px;
   -webkit-animation-fill-mode: both;

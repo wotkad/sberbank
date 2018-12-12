@@ -1,65 +1,110 @@
-#info1
-	background: url("/images/agsquare.png") #f9f9f9 100% 100%;
 .info1
+	position relative
 	display flex
-	&__block:nth-child(1)
-		border-right 1px solid rgba(0,190,156,0.25);
-	&__block
-		margin 56px 0
-		flex-basis 50%
-		display flex
-		align-items center
-		justify-content center
-		&-separator
-			display none
-		&-title
-			font-size 2rem
-			line-height 38px
-			color $black
-			font-family $SemiBold
-			margin-bottom 25px
-			width 50%
-			&:nth-child(3)
-				margin-top 39px
-@media(max-width: 991px)
-	#info1
-		border-top 3px dashed rgba(0,190,156,.3)
-		border-bottom 3px dashed rgba(0,190,156,.3)
-		display flex
-		flex-direction column
-	.i1b1-overlay
-		width 100%
-	.i1b1
+	align-items center
+	justify-content space-between
+	padding 92px 0
+	&__item
+		color $white
 		position relative
-		height 460px
-		width calc(100% - 30px)
-		margin 0 15px 35px 15px
-		order 2
-	.i1b2
-		width 100% !important
-	.i1b1
-		display none
-	.info1
-		order 1
-		flex-wrap wrap
-		&__block:nth-child(1)
-			flex-basis 100%
-			margin-bottom 0
-			border-right 0
-		&__block:nth-child(2)
-			flex-basis 100%
-			padding 35px 0 26px 0
-			margin-top 0
-		&__block
+		&:nth-child(1)
+			flex-basis 50%
+		&:nth-child(2)
+			flex-basis 40%
+		&-title
+			font-family $Regular
+			font-size 1.25rem
+			color $text
+			margin-bottom 26px
+		&-desc
+			font-size 2.625rem
+			font-family $Bold
+			color $text
+			margin-bottom 70px
+		&-images
+			display flex
 			flex-wrap wrap
-			&-title
-				margin-bottom 14px
+			&-image
+				flex-basis 33.33334%
+				margin-bottom 35px
+		&-more
+			font-family $Bold
+			font-size 1.125rem
+			border-bottom 1px dashed $white
+			display inline-block
+			color $green
+			transition .3s
+			border-bottom 2px solid rgba(0,190,156,.3)
+			&:hover
+				color $green - 20%
+			& span
+				margin-left 5px
+		&-journal
+			display flex
+			justify-content center
+			&-link
+				font-family $Bold
+				font-size 1.125rem
+				border-bottom 1px dashed $white
+				display inline-block
+				position absolute
+				left calc(50% - 95.5px)
+				bottom -20px
+				color $green
+				transition .3s
+				img
+					width 100%
+				i
+					margin-right 5px
+				&:hover
+					color $green - 20%
+
+@keyframes sheens
+	0%,
+	79%
+		opacity 0
+		-webkit-transform rotateZ(60deg) translate(-5em, 7.5em)
+		transform rotateZ(60deg) translate(-5em, 7.5em)
+	80%
+		opacity 1
+		-webkit-transform rotateZ(60deg) translate(-5em, 7.5em)
+		transform rotateZ(60deg) translate(-5em, 7.5em)
+	95%
+		opacity 1
+		-webkit-transform: rotateZ(60deg) translate(1em, -11em);
+		transform: rotateZ(60deg) translate(1em, -11em)
+	100%
+		opacity 0
+		-webkit-transform rotateZ(60deg) translate(1em, -9em)
+		transform rotateZ(60deg) translate(1em, -9em)
+
+@media(max-width: 991px)
+	.home
+		padding 70px 0 25px 0
+		flex-wrap wrap
+		justify-content center
+		&__item
+			flex-basis 70%
+			&:nth-child(2)
 				width 100%
-				text-align center
-				&:nth-child(3)
-					margin-top 15px
-			&-separator
-				display block
-				height 1px
-				background-color rgba(0,190,156,0.25);
-				width 50%
+				display flex
+				align-items center
+				justify-content center
+		&__item
+			&-desc
+				max-width 100%
+			&-li
+				max-width 100%
+			&-journal
+				display flex
+				align-items center
+				justify-content center
+				margin-top 50px
+				&-link
+					bottom calc(50% - 20px)
+					background-color rgba(0,0,0,.8)
+					padding 10px
+					border-radius 5px
+					border-bottom none
+				img
+					width 300px

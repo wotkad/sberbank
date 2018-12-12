@@ -69,17 +69,6 @@
 .header .menu .menu_l__item-logo img {
   width: 119px;
 }
-.header .menu .menu_l__item-logo:after {
-  content: '';
-  background-color: $white;
-  height: 46px;
-  width: 1px;
-  position: absolute;
-  display: inline-block;
-  right: 0;
-  top: -webkit-calc(50% - 23px);
-  top: calc(50% - 23px);
-}
 .header .menu .menu_l__item-title {
   line-height: 28px;
   font-size: 1.25rem;

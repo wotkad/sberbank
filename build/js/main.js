@@ -19,10 +19,12 @@ svgMenu.onclick = function() {
 
 //close menu by window resize
 window.onresize = function() {
-	selectorMenu.classList.remove('active-menu');
-	svgMenu.classList.remove('active');
-	popup.classList.remove('popup-active');
-	popupBg.classList.remove('popup-bg-active');
+    if($(window).width() > 880) {
+    	selectorMenu.classList.remove('active-menu');
+    	svgMenu.classList.remove('active');
+    	popup.classList.remove('popup-active');
+    	popupBg.classList.remove('popup-bg-active');
+    }
 }
 
 // slider how
@@ -44,47 +46,6 @@ var swiperHow = new Swiper('.slider2', {
 			slidesPerView: 1,
 			allowTouchMove: true,
 		}
-	}
-});
-
-// slider examples
-var swiperExamples = new Swiper('.slider3', {
-	spaceBetween: 10,
-	allowTouchMove: false,
-	nested: true,
-	navigation: {
-		nextEl: '.examples__slider .swiper-button-next',
-		prevEl: '.examples__slider .swiper-button-prev',
-	},
-	pagination: {
-		el: '.examples__slider .swiper-pagination',
-		type: 'bullets',
-		clickable: true,
-	},
-});
-
-// slider rates
-var swiperExamples = new Swiper('.slider5', {
-	spaceBetween: 20,
-	slidesPerView: 3,
-	grabCursor: false,
-	allowTouchMove: false,
-	autoHeight: true,
-	navigation: {
-		nextEl: '.rates__slider .swiper-button-next',
-		prevEl: '.rates__slider .swiper-button-prev',
-	},
-	pagination: {
-		el: '.rates__slider .swiper-pagination',
-		type: 'bullets',
-		clickable: true,
-	},
-	breakpoints: {
-		991: {
-			grabCursor: true,
-			slidesPerView: 1,
-			allowTouchMove: true,
-		},
 	}
 });
 
@@ -165,17 +126,20 @@ for (i = 0; i < popupButton.length; i++) {
 	popupButton[i].onclick = function() {
 		popup.classList.toggle('popup-active');
 		popupBg.classList.toggle('popup-bg-active');
+		document.body.style.overflowY = 'hidden';
 	}
 }
 
 popupBg.onclick = function() {
 	popup.classList.toggle('popup-active');
 	popupBg.classList.toggle('popup-bg-active');
+	document.body.style.overflowY = 'auto';
 }
 
 popupClose.onclick = function() {
 	popup.classList.toggle('popup-active');
 	popupBg.classList.toggle('popup-bg-active');
+	document.body.style.overflowY = 'auto';
 }
 
 //close popup by "esc" button
@@ -183,6 +147,7 @@ window.onkeydown = function( event ) {
 	if ( event.keyCode == 27 ) {
 		popup.classList.remove('popup-active');
 		popupBg.classList.remove('popup-bg-active');
+		document.body.style.overflowY = 'auto';
 	}
 };
 
@@ -216,20 +181,3 @@ calllater.onclick = function() {
 callnow.onclick = function() {
 	textarea.classList.add('hide');
 }
-
-var win = $(window);
-var counter = $('.form__block-price');
-var id = 0;
-win.scroll(function() {
-	if(id == 0 && win.scrollTop() + win.height() > counter.offset().top) {
-		var ccc = 0;
-		id = setInterval( function() {
-			ccc += 10000;
-			counter.html(ccc + " руб.");
-			if (ccc == 280000) {
-				clearInterval(id);
-			}
-		}, 50)
-	}
-});
-

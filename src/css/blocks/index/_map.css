@@ -66,9 +66,103 @@
 .map__block-phone:hover {
   color: $darktext20%;
 }
+.ymap-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("/images/map.png") #fff no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#map-yandex {
+  position: relative;
+  width: 100%;
+  height: 465px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000;
+  -webkit-transition: opacity 0.7s ease;
+  -o-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.55);
+}
+.loader:after,
+.loader:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.loader.is-active {
+  top: 0;
+  opacity: 1;
+}
+.loader-default:after {
+  position: absolute;
+  top: -webkit-calc(50% - 24px);
+  top: calc(50% - 24px);
+  left: -webkit-calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+  border: solid 8px #fff;
+  border-left-color: transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
 @media (max-width: 767px) {
   .map {
     right: -webkit-calc(50% - 140px);
     right: calc(50% - 140px);
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
   }
 }

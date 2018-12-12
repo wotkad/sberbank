@@ -69,6 +69,7 @@ input:-ms-input-placeholder {
   margin: 0 auto;
   position: relative;
   z-index: 4;
+  height: 100%;
 }
 .c-wrapper {
   max-width: 944px;

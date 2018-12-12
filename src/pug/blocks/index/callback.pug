@@ -1,19 +1,23 @@
-.callbackblock-bg
 .w-wrapper
 	.callbackblock
-		.callbackblock__title
-			p Узнайте, как мы оцениваем нанесенный ущерб и гарантируем выплату компенсации.
-			p Оставьте заявку и наш менеджер свяжется с Вами через
-				span 40 секунд!
-		form.callbackblock__form
-			.callbackblock__form-input
-				i.fa.fa-phone
-				input(type="tel" name="phone" placeholder="Номер телефона" required="required")
-			button(type="submit").callbackblock__form-button Позвоните мне
-			.callbackblock__form-policy
-				label.callbackblock__form-policy-input
-					input.checkbox(type="checkbox" name="radio-test" required="required" checked)
-					span.checkbox-custom
-				.callbackblock__form-policy-text
-					span Соглашаюсь на обработку персональных данных на условиях и для целей, определенных
-					a(target="_blank" href="/files/politics.pdf") политикой конфиденциальности
+		.callbackblock__block
+			.callbackblock__block-image(style="background: url(/images/docs.png) 50% 50% no-repeat; background-size: cover;")
+		.callbackblock__block
+			form.callbackblock__block-form
+				.callbackblock__block-form-title Наши отчеты гарантированно принимает Сбербанк
+				.callbackblock__block-form-separator
+				.callbackblock__block-form-desc Узнайте почему!
+				.callbackblock__block-form-input
+					i.fa.fa-user
+					input(type="name" name="name" placeholder="Ваше имя" required="required")
+				.callbackblock__block-form-input
+					i.fa.fa-phone
+					input(type="tel" name="phone" placeholder="Номер телефона" required="required")
+				button(type="submit").callbackblock__block-form-button Заказать
+				.callbackblock__block-form-policy
+					label.callbackblock__block-form-policy-input
+						input.checkbox(type="checkbox" name="radio-test" required="required" checked)
+						span.checkbox-custom
+					.callbackblock__block-form-policy-text
+						span Соглашаюсь на обработку персональных данных на условиях и для целей, определенных
+						a(target="_blank" href="/files/politics.pdf") политикой конфиденциальности
