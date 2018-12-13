@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="/css/libs.min.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -66,9 +63,17 @@
         <div class="home-bg" data-parallax="scroll" data-image-src="/images/home-bg.jpg">
           <div class="w-wrapper">
             <div class="home">
-              <div class="home__item"></div>
-              <div class="home__item"></div>
-              <div class="home__item"></div>
+              <div class="home__items">
+                <div class="home__items-title">Оценка для Сбербанка по Москве и МО</div>
+                <div class="home__items-item"><span>от</span><span>2700</span>
+                  <div class="home__items-item-shadow"></div>
+                  <p>Стоимость оценки, руб.</p>
+                </div>
+                <div class="home__items-item">
+                  <div class="home__items-item-img"><img src="/images/sberbank.png" alt="sberbank"/></div>
+                  <p>Аккредитованная компания</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,11 +81,34 @@
       <section id="info1">
         <div class="w-wrapper">
           <div class="info1">
+            <div class="info1__form">
+              <div class="info1__form-item">
+                <div class="info1__form-item-title">Подготовим отчет за 2 часа</div>
+              </div>
+              <form class="info1__form-form" action="#">
+                <div class="info1__form-form-input"><i class="fa fa-user"></i>
+                  <input type="text" name="name" placeholder="Ваше имя" required="required"/>
+                </div>
+                <div class="info1__form-form-input"><i class="fa fa-phone"></i>
+                  <input type="tel" name="phone" placeholder="Номер телефона" required="required"/>
+                </div>
+                <button class="info1__form-form-button" type="submit">Позвоните мне</button>
+                <div class="info1__form-form-input">
+                  <input class="checkbox" type="checkbox" name="p1" checked="checked"/><span class="checkbox-custom"></span><span>Соглашаюсь на обработку персональных данных на условиях и для целей, определенных<a target="_blank" href="/files/politics.pdf">политикой конфиденциальности</a></span>
+                </div>
+              </form>
+            </div>
             <div class="info1__item">
-              <div class="info1__item-title">Затопило квартиру?</div>
-              <div class="info1__item-desc">Произведем оценку и взыскание убытков под ключ от<span>4 990 руб.</span></div>
-              <div class="info1__item-li">Заказать выезд строительного эксперта<span>бесплатно</span></div>
-              <div class="info1__item-button callback">Отправить заявку</div>
+              <div class="info1__item-title">Оценочная компания «ИНЕКС»</div>
+              <div class="info1__item-desc">Аккредитована 27 банками</div>
+              <div class="info1__item-images">
+                <div class="info1__item-images-image"><img src="/images/info1-1.png" alt="info1-1"/></div>
+                <div class="info1__item-images-image"><img src="/images/info1-2.png" alt="info1-2"/></div>
+                <div class="info1__item-images-image"><img src="/images/info1-3.png" alt="info1-3"/></div>
+                <div class="info1__item-images-image"><img src="/images/info1-4.png" alt="info1-4"/></div>
+                <div class="info1__item-images-image"><img src="/images/info1-5.png" alt="info1-5"/></div>
+                <div class="info1__item-images-image"><img src="/images/info1-6.png" alt="info1-6"/></div>
+              </div><a class="info1__item-more" href="#"><i class="fa fa-list-ul"></i><span>Весь список банков</span></a>
             </div>
             <div class="info1__item">
               <div class="info1__item-journal"><img src="/images/journal.png"/><a class="info1__item-journal-link" target="_blank" href="/files/example.pdf"><i class="fa fa-eye"></i><span>Смотреть пример отчёта</span></a></div>
@@ -89,39 +117,126 @@
         </div>
       </section>
       <section id="rates">
-        <div class="rates-bg"></div>
+        <div class="rates-image"></div>
         <div class="w-wrapper">
           <div class="rates">
             <div class="rates__title">
               <div class="rates__title-text">Сколько это будет стоить?</div>
             </div>
+            <div class="rates__blocks">
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Квартира, комната</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>2 700 руб.</span></div>
+                </div>
+                <div class="rates__blocks-item-image"><img src="/images/rates1.png" alt="rates1"/></div>
+              </div>
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-image"><img src="/images/rates2.png" alt="rates2"/></div>
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Оборудование</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>10 000 руб.</span></div>
+                </div>
+              </div>
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Земельный участок</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>6 000 руб.</span></div>
+                </div>
+                <div class="rates__blocks-item-image"><img src="/images/rates3.png" alt="rates3"/></div>
+              </div>
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-image"><img src="/images/rates4.png" alt="rates4"/></div>
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Нежилое помещение</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>12 000 руб.</span></div>
+                </div>
+              </div>
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Загородный дом</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>8 000 руб.</span></div>
+                </div>
+                <div class="rates__blocks-item-image"><img src="/images/rates5.png" alt="rates5"/></div>
+              </div>
+              <div class="rates__blocks-item">
+                <div class="rates__blocks-item-image"><img src="/images/rates6.png" alt="rates6"/></div>
+                <div class="rates__blocks-item-content">
+                  <div class="rates__blocks-item-content-title">Нежилое здание</div>
+                  <div class="rates__blocks-item-content-separator"></div>
+                  <div class="rates__blocks-item-content-text"><span>Цена от:</span><span>15 000 руб.</span></div>
+                </div>
+              </div>
+              <div class="rates__center">
+                <div class="rates__center-image"><img src="/images/polygon.png" alt="polygon"/></div>
+                <div class="rates__center-image"><img src="/images/polygon.png" alt="polygon"/></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section id="callback">
-        <div class="callbackblock-bg"></div>
         <div class="w-wrapper">
           <div class="callbackblock">
-            <div class="callbackblock__title">
-              <p>Узнайте, как мы оцениваем нанесенный ущерб и гарантируем выплату компенсации.</p>
-              <p>Оставьте заявку и наш менеджер свяжется с Вами через<span>40 секунд!</span></p>
+            <div class="callbackblock__block">
+              <div class="callbackblock__block-image" style="background: url(/images/docs.png) 50% 50% no-repeat; background-size: cover;"></div>
             </div>
-            <form class="callbackblock__form">
-              <div class="callbackblock__form-input"><i class="fa fa-phone"></i>
-                <input type="tel" name="phone" placeholder="Номер телефона" required="required"/>
-              </div>
-              <button class="callbackblock__form-button" type="submit">Позвоните мне</button>
-              <div class="callbackblock__form-policy">
-                <label class="callbackblock__form-policy-input">
-                  <input class="checkbox" type="checkbox" name="radio-test" required="required" checked="checked"/><span class="checkbox-custom"></span>
-                </label>
-                <div class="callbackblock__form-policy-text"><span>Соглашаюсь на обработку персональных данных на условиях и для целей, определенных</span><a target="_blank" href="/files/politics.pdf">политикой конфиденциальности</a></div>
-              </div>
-            </form>
+            <div class="callbackblock__block">
+              <form class="callbackblock__block-form">
+                <div class="callbackblock__block-form-title">Наши отчеты гарантированно принимает Сбербанк</div>
+                <div class="callbackblock__block-form-separator"></div>
+                <div class="callbackblock__block-form-desc">Узнайте почему!</div>
+                <div class="callbackblock__block-form-input"><i class="fa fa-user"></i>
+                  <input type="name" name="name" placeholder="Ваше имя" required="required"/>
+                </div>
+                <div class="callbackblock__block-form-input"><i class="fa fa-phone"></i>
+                  <input type="tel" name="phone" placeholder="Номер телефона" required="required"/>
+                </div>
+                <button class="callbackblock__block-form-button" type="submit">Заказать</button>
+                <div class="callbackblock__block-form-policy">
+                  <label class="callbackblock__block-form-policy-input">
+                    <input class="checkbox" type="checkbox" name="radio-test" required="required" checked="checked"/><span class="checkbox-custom"></span>
+                  </label>
+                  <div class="callbackblock__block-form-policy-text"><span>Соглашаюсь на обработку персональных данных на условиях и для целей, определенных</span><a target="_blank" href="/files/politics.pdf">политикой конфиденциальности</a></div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-      <section id="docs"></section>
+      <section id="docs">
+        <div class="docs-image"></div>
+        <div class="w-wrapper">
+          <div class="docs">
+            <div class="docs__title">Документы, необходимые для оценки:</div>
+            <div class="docs__items">
+              <div class="docs__items-item">
+                <div class="docs__items-item-text"><span>1.</span>
+                  <p>Правоустанавливающий документ на объект</p>
+                </div>
+                <div class="docs__items-item-link"><i class="fa fa-eye"></i><a href="#">Пример</a></div>
+              </div>
+              <div class="docs__items-item">
+                <div class="docs__items-item-text"><span>2.</span>
+                  <p>Поэтажный план и экспликация</p>
+                </div>
+                <div class="docs__items-item-link"><i class="fa fa-eye"></i><a href="#">Пример</a></div>
+              </div>
+              <div class="docs__items-item">
+                <div class="docs__items-item-text"><span>3.</span>
+                  <p>Паспортные данные заказчика</p>
+                </div>
+                <div class="docs__items-item-link"><i class="fa fa-eye"></i><a href="#">Пример</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="how">
         <div class="w-wrapper">
           <div class="how">
@@ -132,52 +247,52 @@
               <div class="swiper-container slider2">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="how__block wow fadeIn" data-wow-delay="0.3s">
-                      <div class="how__block-image"><img src="/images/home.png"/>
+                    <div class="how__block">
+                      <div class="how__block-image"><img src="/images/how1.png" alt="how1"/>
                         <div class="how__block-image-number">1</div>
                       </div>
                       <div class="how__block-text">
-                        <p>Производим осмотр</p>
+                        <p>Обращение клиента</p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="how__block wow fadeIn" data-wow-delay="0.8s">
-                      <div class="how__block-image"><img src="/images/newspaper.png"/>
+                    <div class="how__block">
+                      <div class="how__block-image"><img src="/images/how2.png" alt="how2"/>
                         <div class="how__block-image-number">2</div>
                       </div>
                       <div class="how__block-text">
-                        <p>Подготавливаем оценку</p>
+                        <p>Выезд оценщика</p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="how__block wow fadeIn" data-wow-delay="1.3s">
-                      <div class="how__block-image"><img src="/images/mail.png"/>
+                    <div class="how__block">
+                      <div class="how__block-image"><img src="/images/how3.png" alt="how3"/>
                         <div class="how__block-image-number">3</div>
                       </div>
                       <div class="how__block-text">
-                        <p>Досудебный процесс</p>
+                        <p>Подписание договора</p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="how__block wow fadeIn" data-wow-delay="1.7s">
-                      <div class="how__block-image"><img src="/images/auction.png"/>
+                    <div class="how__block">
+                      <div class="how__block-image"><img src="/images/how4.png" alt="how4"/>
                         <div class="how__block-image-number">4</div>
                       </div>
                       <div class="how__block-text">
-                        <p>Готовим пакет документов</p>
+                        <p>Подготовка отчета</p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="how__block wow fadeIn" data-wow-delay="2.1s">
-                      <div class="how__block-image"><img src="/images/money.png"/>
+                    <div class="how__block">
+                      <div class="how__block-image"><img src="/images/how5.png" alt="how5"/>
                         <div class="how__block-image-number">5</div>
                       </div>
                       <div class="how__block-text">
-                        <p>Ведем дело под ключ</p>
+                        <p>Выдача отчета</p>
                       </div>
                     </div>
                   </div>
@@ -189,25 +304,29 @@
         </div>
       </section>
       <section id="faq">
-        <div class="faq-bg"></div>
-        <div class="faq-image"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="358" height="358"><style>.a{fill:#FFF;}</style><path d="M256 0C120.5 0 10.2 110.3 10.2 245.8c0 62.2 23.1 121.2 65.2 166.7l-13.7 88.3c-0.6 3.6 1 7.2 3.9 9.3 1.7 1.2 3.7 1.8 5.6 1.8 1.5 0 3-0.4 4.4-1.1l79.2-41c31.8 14.4 65.8 21.7 101 21.7 135.5 0 245.8-110.3 245.8-245.8C501.8 110.3 391.5 0 256 0zM256 472.2c-34 0-66.6-7.3-97.1-21.8 -2.7-1.3-5.9-1.2-8.6 0.1l-66.5 34.5 11.5-74.2c0.5-3-0.5-6-2.6-8.2 -40.7-42.4-63.1-98.1-63.1-156.8C29.6 120.9 131.1 19.3 256 19.3s226.4 101.6 226.4 226.4S380.9 472.2 256 472.2z" class="a"/><path d="M256 70.7c-28.2 0-51.2 23-51.2 51.2 0 28.2 23 51.2 51.2 51.2 28.2 0 51.2-23 51.2-51.2C307.2 93.7 284.2 70.7 256 70.7zM256 153.8c-17.6 0-31.9-14.3-31.9-31.9S238.4 90.1 256 90.1c17.6 0 31.9 14.3 31.9 31.9S273.6 153.8 256 153.8z" class="a"/><path d="M312.8 357.7h-11V199.1c0-5.3-4.3-9.7-9.7-9.7h-92.8c-5.3 0-9.7 4.3-9.7 9.7v32.1c0 5.3 4.3 9.7 9.7 9.7h11v116.8h-11c-5.3 0-9.7 4.3-9.7 9.7v32.1c0 5.3 4.3 9.7 9.7 9.7h113.5c5.3 0 9.7-4.3 9.7-9.7v-32.1C322.4 362.1 318.1 357.7 312.8 357.7zM303.1 389.9h-94.2v-12.8h11c5.3 0 9.7-4.3 9.7-9.7V231.3c0-5.3-4.3-9.7-9.7-9.7h-11v-12.8H282.4v158.6c0 5.3 4.3 9.7 9.7 9.7h11V389.9z" class="a"/></svg></div>
         <div class="w-wrapper">
           <div class="faq">
-            <div class="faq__title">Управляющая компания отказывается оформлять акт о заливе?</div>
+            <div class="faq__title">Подробнее об услуге</div>
             <div class="faq__block">
+              <div class="faq__block-image" style="background: url(/images/faq-image.jpg) 50% 50% no-repeat; background-size: cover;"></div>
               <div class="faq__block-text">
-                <p>Достаточно подать жалобу в районное отделение</p>
-                <p>Московской жилищной инспекции</p>
+                <p>Локаята, следовательно, транспонирует дуализм. Исчисление предикатов, как следует из вышесказанного, поразительно. Созерцание, следовательно, рассматривается гравитационный парадокс, изменяя привычную реальность. Суждение непредсказуемо. Суждение непредсказуемо. Интересно отметить, что бабувизм абстрактен.  Гегельянство, как следует из вышесказанного, методологически порождает и обеспечивает закон внешнего мира. Свобода, конечно, заполняет естественный закон внешнего мира. Моцзы, Сюнъцзы и другие считали, что дискретность осмысленно порождает и обеспечивает сенсибельный катарсис, изменяя привычную реальность.</p>
+                <p>Жизнь иллюзорна. Боль, следовательно, представляет собой закон внешнего мира. Катарсис осмысленно порождает и обеспечивает гений, tertium nоn datur.  Бабувизм индуцирует трагический структурализм, хотя в официозе принято обратное. Сомнение философски дискредитирует напряженный мир. Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако генетика осмысленно контролирует бабувизм.</p>
+                <p>Платоновская академия дискредитирует типичный здравый смысл. Сомнение, как следует из вышесказанного, оспособляет сенсибельный дуализм. Интересно отметить, что бабувизм индуцирует позитивизм.</p>
+                <div class="faq__block-text-shadow"></div>
               </div>
-            </div>
-            <div class="faq__block"><a class="faq__block-button" href="/files/jaloba.docx" download="jaloba.docx"><span><img src="/images/file.png"/></span><span>Скачать жалобу</span></a>
-              <div class="faq__block-desc">После чего Вы получите Акт уже через 10-14 дней.</div>
+              <div class="faq__block-button"><i class="fa fa-refresh"></i><span>Читать далее</span></div>
             </div>
           </div>
         </div>
       </section>
       <section id="map">
-        <div class="full-map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adf600d99eaf7a17d09bd050441564517de78538025a912e984e4cd424b6b5703&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script></div>
+        <div class="full-map">
+          <div class="ymap-container">
+            <div class="loader loader-default"></div>
+            <div id="map-yandex"></div>
+          </div>
+        </div>
         <div class="w-wrapper">
           <div class="map">
             <div class="map__block">
@@ -230,15 +349,6 @@
           <div class="popup__form-input"><i class="fa fa-phone"></i>
             <input type="tel" name="phone" placeholder="Номер телефона" required="required"/>
           </div>
-          <div class="trt2">
-            <input class="radio" id="callnow" type="radio" name="phone1" value="Да, соседи"/><span class="radio-custom"></span><span>Позвонить сейчас</span>
-          </div>
-          <div class="trt2">
-            <input class="radio" id="calllater" type="radio" name="phone1" value="Нет, не ясно"/><span class="radio-custom"></span><span>По времени</span>
-          </div>
-          <div class="popup__form-textarea hide"><i class="fa fa-clock"></i>
-            <input type="text" name="text" placeholder="Укажите время"/>
-          </div>
           <button class="popup__form-button" type="submit">Позвоните мне</button>
           <div class="popup__form-input">
             <input class="checkbox" type="checkbox" name="p1" checked="checked"/><span class="checkbox-custom"></span><span>Соглашаюсь на обработку персональных данных на условиях и для целей, определенных<a target="_blank" href="/files/politics.pdf">политикой конфиденциальности</a></span>
@@ -247,7 +357,6 @@
         </form>
       </div>
     </div>
-    <script src="/js/test.js"></script>
     <script src="/js/libs.min.js"></script>
     <script src="/js/parallax.min.js"></script>
     <script src="/js/wow.min.js"></script>
