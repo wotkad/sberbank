@@ -1,0 +1,110 @@
+.docs-image {
+  position: absolute;
+  z-index: 1;
+  background: url("/images/docs-image.png") 50% 50% no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.docs {
+  padding: 55px 0 58px 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.docs__title {
+  color: $white;
+  font-size: 2.625rem;
+  font-family: $Bold;
+  line-height: 48px;
+  margin-bottom: 51px;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  text-align: center;
+}
+.docs__items {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.docs__items-item {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.docs__items-item-text span {
+  font-family: $Bold;
+  color: $green;
+  line-height: 28px;
+  font-size: 1.5rem;
+}
+.docs__items-item-text p {
+  font-family: $Bold;
+  line-height: 28px;
+  font-size: 1.5rem;
+  color: $white;
+  display: inline;
+  margin-left: 5px;
+}
+.docs__items-item-link {
+  color: $green;
+  cursor: pointer;
+}
+.docs__items-item-link i {
+  color: $green;
+  margin-right: 5px;
+}
+.docs__items-item-link a {
+  font-family: $Bold;
+  color: $green;
+  line-height: 28px;
+  font-size: 1.25rem;
+  border-bottom: 1px solid $green;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.docs__items-item-link a:hover {
+  color: $white;
+}
+@media (max-width: 667px) {
+  .docs__items-item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .docs__items-item-text {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    text-align: center;
+  }
+}

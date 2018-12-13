@@ -1,10 +1,9 @@
 .home-bg
-	height 675px
+	height 100vh
 .home
 	position relative
 	display flex
 	align-items center
-	padding 92px 0
 	flex-wrap wrap
 	height 100%
 	&__items
@@ -54,15 +53,11 @@
 				text-align center
 				font-family $Regular
 @media(max-width: 991px)
-	.home-bg
-		height 680px
 	.home
-		padding 70px 0 25px 0
 		flex-wrap wrap
 		justify-content center
-@media(max-width: 784px)
-	.home-bg
-		height 700px
-@media(max-width: 500px)
-	.home-bg
-		height 800px
+		&__items
+			&-item
+				flex-basis 100%
+				&:nth-child(2)
+					margin-bottom 40px

@@ -1,5 +1,21 @@
 .w-wrapper
 	.info1
+		.info1__form
+			.info1__form-item
+				.info1__form-item-title Подготовим отчет за 2 часа
+			form.info1__form-form(action="#")
+				.info1__form-form-input
+					i.fa.fa-user
+					input(type="text" name="name" placeholder="Ваше имя" required="required")
+				.info1__form-form-input
+					i.fa.fa-phone
+					input(type="tel" name="phone" placeholder="Номер телефона" required="required")
+				button(type="submit").info1__form-form-button Позвоните мне
+				.info1__form-form-input
+					input.checkbox(type='checkbox' name='p1' checked="checked")
+					span.checkbox-custom
+					span Соглашаюсь на обработку персональных данных на условиях и для целей, определенных
+						a(target="_blank" href="/files/politics.pdf") политикой конфиденциальности
 		.info1__item
 			.info1__item-title Оценочная компания «ИНЕКС»
 			.info1__item-desc Аккредитована 27 банками

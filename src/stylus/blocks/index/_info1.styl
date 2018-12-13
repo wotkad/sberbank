@@ -4,26 +4,130 @@
 	align-items center
 	justify-content space-between
 	padding 92px 0
+	flex-wrap wrap
+	&__form
+		flex-basis 85%
+		box-shadow 0 0 40px 10px rgba(0, 0, 0, 0.07)
+		border-radius 3px
+		border 10px solid #f9f9f9
+		display flex
+		margin-top -240px
+		z-index 5
+		margin-left auto
+		margin-right auto
+		position relative
+		background linear-gradient(-280deg, #00be9c 0%, #008e75 100%)
+		align-items center
+		padding 30px 40px 15px
+		&-form
+			flex-basis 90%
+			padding-left 4%
+			display flex
+			flex-wrap wrap
+			&-button
+				padding 8px 20px
+				flex-basis calc(33.33334% - 20px)
+				background-color $green
+				font-family $Bold
+				line-height 26px
+				border none
+				color $white
+				font-size 1rem
+				border-radius 3px
+				cursor pointer
+				transition .3s
+				&:hover
+					background-color $green - 20%
+			&-input
+				position relative
+				margin-right 20px
+				flex-basis calc(33.33334% - 10px)
+				border-radius 3px
+				background-color $white
+				&:nth-child(4)
+					margin-right 0
+					display flex
+					border none
+					background-color transparent
+					flex-basis 100%
+					align-items center
+					& span
+						font-family $Light
+						color $white
+						font-size 0.725rem
+						&:nth-child(2)
+							margin-left 0
+						&:nth-child(3)
+							flex-basis 100%
+					& a
+						margin-left 3px
+						display inline-blockq
+						color $white
+						border-bottom 1px solid $white
+						transition .3s
+						&:hover
+							color $white + 20%
+							border-color $white + 20%
+				& input
+					padding 15px 0 15px 42px
+					width 100%
+					font-size 0.875rem
+					height 100%
+					border-radius 3px
+					color #9a9a9a
+					box-shadow none
+					background-color transparent
+					border 2px solid #ededed
+					font-family $Light
+				& i
+					position absolute
+					left 20px
+					top 19px
+					color $green
+					font-size 16px
+		&-item
+			&:nth-child(1)
+				flex-basis 25%
+			&-title
+				font-family $Bold
+				font-size 1.25rem
+				color $white
+				line-height 28px
+				position relative
+				padding-right 9%
+				&:before
+					content ''
+					position absolute
+					right 0
+					height 100%
+					width 2px
+					background-color $white
+					top 0
+					transform rotate(15deg)
 	&__item
 		color $white
 		position relative
-		&:nth-child(1)
-			flex-basis 50%
 		&:nth-child(2)
+			flex-basis 50%
+			flex-wrap wrap
+		&:nth-child(3)
 			flex-basis 40%
 		&-title
 			font-family $Regular
 			font-size 1.25rem
 			color $text
 			margin-bottom 26px
+			flex-basis 100%
 		&-desc
 			font-size 2.625rem
 			font-family $Bold
 			color $text
 			margin-bottom 70px
+			flex-basis 100%
 		&-images
 			display flex
 			flex-wrap wrap
+			flex-basis 100%
 			&-image
 				flex-basis 33.33334%
 				margin-bottom 35px
@@ -58,43 +162,15 @@
 					margin-right 5px
 				&:hover
 					color $green - 20%
-
-@keyframes sheens
-	0%,
-	79%
-		opacity 0
-		-webkit-transform rotateZ(60deg) translate(-5em, 7.5em)
-		transform rotateZ(60deg) translate(-5em, 7.5em)
-	80%
-		opacity 1
-		-webkit-transform rotateZ(60deg) translate(-5em, 7.5em)
-		transform rotateZ(60deg) translate(-5em, 7.5em)
-	95%
-		opacity 1
-		-webkit-transform: rotateZ(60deg) translate(1em, -11em);
-		transform: rotateZ(60deg) translate(1em, -11em)
-	100%
-		opacity 0
-		-webkit-transform rotateZ(60deg) translate(1em, -9em)
-		transform rotateZ(60deg) translate(1em, -9em)
-
-@media(max-width: 991px)
-	.home
+@media(max-width: 1180px)
+	.info1
 		padding 70px 0 25px 0
 		flex-wrap wrap
 		justify-content center
 		&__item
-			flex-basis 70%
-			&:nth-child(2)
-				width 100%
-				display flex
-				align-items center
-				justify-content center
-		&__item
-			&-desc
-				max-width 100%
-			&-li
-				max-width 100%
+			flex-basis 100%
+			&-images
+				justify-content space-between
 			&-journal
 				display flex
 				align-items center
@@ -108,3 +184,51 @@
 					border-bottom none
 				img
 					width 300px
+@media(max-width: 991px)
+	.info1
+		&__item
+			&:nth-child(2)
+				flex-basis 100%
+			&:nth-child(3)
+				flex-basis 100%
+@media(max-width: 600px)
+	.info1
+		padding-top 40px
+		&__form
+			margin 0
+			flex-basis 100%
+			padding 10px
+			margin-top 0
+			flex-wrap wrap
+			&-item:nth-child(1)
+				flex-basis 100%
+			&-item
+				&-title
+					padding-right 0
+					text-align center
+					padding-bottom 10px
+					&:before
+						display none
+			&-form
+				padding-left 0
+				flex-basis 100%
+				&-input
+					margin-right 0
+					flex-basis 100%
+					margin-bottom 15px
+					&:nth-child(4)
+						& span
+							&:nth-child(3)
+								flex-basis 90%
+				&-button
+					flex-basis 100%
+		&__item
+			&:nth-child(2)
+				text-align center
+			&__title
+				margin-top 26px
+			&-images
+				&-image
+					flex-basis 100%
+			&-desc
+				margin-bottom 40px

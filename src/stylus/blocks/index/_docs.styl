@@ -1,0 +1,67 @@
+.docs-image
+	position absolute
+	z-index 1
+	background url(/images/docs-image.png) 50% 50% no-repeat
+	background-size cover
+	width 100%
+	height 100%
+.docs
+	padding 55px 0 58px 0
+	z-index 3
+	display flex
+	flex-wrap wrap
+	&__title
+		color $white
+		font-size 2.625rem
+		font-family $Bold
+		line-height 48px
+		margin-bottom 51px
+		flex-basis 100%
+		text-align center
+	&__items
+		flex-basis 100%
+		display flex
+		flex-wrap wrap
+		&-item
+			flex-basis 100%
+			border-bottom 1px solid rgba(255,255,255,.3)
+			padding 20px
+			display flex
+			justify-content space-between
+			&-text
+				& span
+					font-family $Bold
+					color $green
+					line-height 28px
+					font-size 1.5rem
+				& p
+					font-family $Bold
+					line-height 28px
+					font-size 1.5rem
+					color $white
+					display inline
+					margin-left 5px
+			&-link
+				color $green
+				cursor pointer
+				& i
+					color $green
+					margin-right 5px
+				& a
+					font-family $Bold
+					color $green
+					line-height 28px
+					font-size 1.25rem
+					border-bottom 1px solid $green
+					transition .3s
+					&:hover
+						color $white
+@media(max-width: 667px)
+	.docs
+		&__items
+			&-item
+				flex-wrap wrap
+				justify-content center
+				&-text
+					flex-basis 100%
+					text-align center

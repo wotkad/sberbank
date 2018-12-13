@@ -195,15 +195,14 @@
   }
 }
 @media (max-width: 900px) {
-  #how {
-    border-top: 3px dashed rgba(0,190,156,0.3);
-    border-bottom: 3px dashed rgba(0,190,156,0.3);
+  .how {
+    padding-bottom: 100px;
   }
   .how__title {
     margin-bottom: 25px;
   }
   .how__title-text {
-    width: 57%;
+    width: 100%;
     text-align: center;
   }
   .how__title-text-img {

@@ -49,8 +49,8 @@ var swiperHow = new Swiper('.slider2', {
 	}
 });
 
-//send mail
-var sendMail = function sendMail(selector) {
+//send callback
+var callBack = function sendMail(selector) {
   return fetch('mail.php', {
 	method: 'POST',
 	body: new FormData(document.querySelector(selector))
@@ -285,3 +285,12 @@ var wow = new WOW(
 
 	});
 
+var faqShadow = document.querySelector('.faq__block-text-shadow');
+var faqText = document.querySelector('.faq__block-text');
+var moreButton = document.querySelector('.faq__block-button');
+moreButton.onclick = function() {
+	faqText.style.height = 'auto';
+	faqText.style.boxShadow = '0 0 23px 3px rgba(0,0,0,0.1)';
+	faqShadow.style.display = 'none';
+	moreButton.style.display = 'none';
+}

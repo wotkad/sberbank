@@ -141,36 +141,32 @@
 .checkbox-custom
 	border-radius 4px
 @media(max-width: 991px)
-	#callback
-		border-top 3px dashed rgba(0,190,156,.3)
-		border-bottom 3px dashed rgba(0,190,156,.3)
 	.callbackblock
 		padding 35px 0 45px 0
 		&__block
 			&-image
 				display none
-			&-title
-				margin-bottom 30px
+			&:nth-child(2)
+				flex-basis 100%
+				&-title
+					margin-bottom 30px
+					text-align center
 			&-form
 				flex-wrap wrap
 				&-input
-					flex-basis calc(50% - 15px)
+					flex-basis 100%
 					margin-bottom 15px
+					& input
+						width 100%
 				&-button
-					flex-basis 50%
+					flex-basis 100%
+					padding 10px 32px
+					width 100%
 					margin-bottom 15px
 				&-policy
+					width 100%
 					flex-basis 100%
 					.checkbox-custom
 						margin 0 15px 0 0
 					&-text
 						font-size 0.75rem
-@media(max-width: 600px)
-	.callbackblock
-		&__block
-			&-form
-				&-input
-					flex-basis 100%
-					margin-right 0
-				&-button
-					flex-basis 100%
