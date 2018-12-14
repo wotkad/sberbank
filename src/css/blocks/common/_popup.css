@@ -99,6 +99,41 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.popup__form-input-policy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__form-input-policy-input span {
+  margin-left: 0;
+}
+.popup__form-input-policy-text span {
+  font-family: $Light;
+  color: $text;
+  font-size: 0.725rem;
+}
+.popup__form-input-policy-text a {
+  margin-left: 3px;
+  display: inline-blockq;
+  color: $green;
+  border-bottom: 1px solid $green;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__form-input-policy-text a:hover {
+  color: $green -20%;
+  border-color: $green -20%;
+}
 .popup__form-input:nth-child(1) i::before {
   margin-top: -2px;
 }
@@ -151,31 +186,6 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.popup__form-input:nth-child(4) span {
-  font-family: $Light;
-  color: $text;
-  font-size: 0.875rem;
-}
-.popup__form-input:nth-child(4) span:nth-child(2) {
-  margin-left: 0;
-}
-.popup__form-input:nth-child(4) span:nth-child(3) {
-  -webkit-flex-basis: 80%;
-      -ms-flex-preferred-size: 80%;
-          flex-basis: 80%;
-}
-.popup__form-input:nth-child(4) a {
-  display: inline-block;
-  color: $green;
-  border-bottom: 1px solid $green;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.popup__form-input:nth-child(4) a:hover {
-  color: $green -20%;
-  border-color: $green -20%;
 }
 .popup__form-button {
   -webkit-flex-basis: 100%;

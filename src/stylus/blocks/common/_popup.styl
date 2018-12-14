@@ -54,6 +54,27 @@
 			display flex
 			align-items center
 			justify-content center
+			&-policy
+				display flex
+				justify-content space-between
+				align-items center
+				&-input
+					& span
+						margin-left 0
+				&-text
+					& span
+						font-family $Light
+						color $text
+						font-size 0.725rem
+					& a
+						margin-left 3px
+						display inline-blockq
+						color $green
+						border-bottom 1px solid $green
+						transition .3s
+						&:hover
+							color $green - 20%
+							border-color $green - 20%
 			&:nth-child(1)
 				i
 					&::before
@@ -88,22 +109,6 @@
 				display flex
 				border none
 				align-items center
-				& span
-					font-family $Light
-					color $text
-					font-size 0.875rem
-					&:nth-child(2)
-						margin-left 0
-					&:nth-child(3)
-						flex-basis 80%
-				& a
-					display inline-block
-					color $green
-					border-bottom 1px solid $green
-					transition .3s
-					&:hover
-						color $green - 20%
-						border-color $green - 20%
 		&-button
 			flex-basis 100%
 			padding 22px 32px

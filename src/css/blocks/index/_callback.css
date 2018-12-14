@@ -97,9 +97,9 @@
 }
 .callbackblock__block-form-button {
   padding: 15px 32px;
-  font-family: $Bold;
+  font-family: $Regular;
   color: $white;
-  font-size: 1rem;
+  font-size: 1.125rem;
   width: 65%;
   position: relative;
   line-height: 26px;
@@ -122,16 +122,27 @@
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 3px solid $green;
+  border: none;
+  overflow: hidden;
 }
-.callbackblock__block-form-button:hover {
-  -webkit-box-shadow: inset 0 0 15px #00ddb5;
-          box-shadow: inset 0 0 15px #00ddb5;
-  color: $white;
-  background-color: $green;
+.callbackblock__block-form-button:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(229,172,142,0)), color-stop(50%, rgba(255,255,255,0.7)), to(rgba(229,172,142,0)));
+  background: -webkit-linear-gradient(top, rgba(229,172,142,0), rgba(255,255,255,0.7) 50%, rgba(229,172,142,0));
+  background: -o-linear-gradient(top, rgba(229,172,142,0), rgba(255,255,255,0.7) 50%, rgba(229,172,142,0));
+  background: linear-gradient(to bottom, rgba(229,172,142,0), rgba(255,255,255,0.7) 50%, rgba(229,172,142,0));
+  -webkit-transform: rotateZ(60deg) translate(-5em, 7.5em);
+      -ms-transform: rotate(60deg) translate(-5em, 7.5em);
+          transform: rotateZ(60deg) translate(-5em, 7.5em);
+  opacity: 0;
+  -webkit-animation: sheens 2.5s infinite;
+          animation: sheens 2.5s infinite;
+  z-index: 100;
 }
 .callbackblock__block-form-policy {
   width: 65%;
@@ -234,6 +245,8 @@
 @media (max-width: 991px) {
   .callbackblock {
     padding: 35px 0 45px 0;
+    width: 50%;
+    margin: 0 auto;
   }
   .callbackblock__block-image {
     display: none;

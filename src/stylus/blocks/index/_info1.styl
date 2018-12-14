@@ -24,6 +24,27 @@
 			padding-left 4%
 			display flex
 			flex-wrap wrap
+			&-policy
+				display flex
+				justify-content space-between
+				align-items center
+				&-input
+					& span
+						margin-left 0
+				&-text
+					& span
+						font-family $Light
+						color $white
+						font-size 0.725rem
+					& a
+						margin-left 3px
+						display inline-blockq
+						color $white
+						border-bottom 1px solid $white
+						transition .3s
+						&:hover
+							color $white - 20%
+							border-color $white - 20%
 			&-button
 				padding 8px 20px
 				flex-basis calc(33.33334% - 20px)
@@ -36,8 +57,20 @@
 				border-radius 3px
 				cursor pointer
 				transition .3s
-				&:hover
-					background-color $green - 20%
+				position relative
+				overflow hidden
+				&:after
+					content: ""
+					position: absolute
+					top -50%
+					left -50%
+					right -50%
+					bottom -50%
+					background linear-gradient(to bottom,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+					transform rotateZ(60deg) translate(-5em,7.5em)
+					opacity 0
+					animation sheens 2.5s infinite
+					z-index 100
 			&-input
 				position relative
 				margin-right 20px
@@ -51,23 +84,6 @@
 					background-color transparent
 					flex-basis 100%
 					align-items center
-					& span
-						font-family $Light
-						color $white
-						font-size 0.725rem
-						&:nth-child(2)
-							margin-left 0
-						&:nth-child(3)
-							flex-basis 100%
-					& a
-						margin-left 3px
-						display inline-blockq
-						color $white
-						border-bottom 1px solid $white
-						transition .3s
-						&:hover
-							color $white + 20%
-							border-color $white + 20%
 				& input
 					padding 15px 0 15px 42px
 					width 100%
@@ -131,6 +147,9 @@
 			&-image
 				flex-basis 33.33334%
 				margin-bottom 35px
+				display flex
+				align-items center
+				justify-content center
 		&-more
 			font-family $Bold
 			font-size 1.125rem
@@ -146,10 +165,12 @@
 		&-journal
 			display flex
 			justify-content center
+			img
+				height 316px
 			&-link
 				font-family $Bold
 				font-size 1.125rem
-				border-bottom 1px dashed $white
+				border-bottom 2px solid rgba(0,190,156,0.3)
 				display inline-block
 				position absolute
 				left calc(50% - 95.5px)
@@ -176,6 +197,8 @@
 				align-items center
 				justify-content center
 				margin-top 50px
+				img
+					height auto
 				&-link
 					bottom calc(50% - 20px)
 					background-color rgba(0,0,0,.8)
@@ -193,7 +216,7 @@
 				flex-basis 100%
 		&__form
 			margin 0 auto
-			flex-basis 80%
+			flex-basis 50%
 			padding 10px
 			margin-top -150px
 			flex-wrap wrap
@@ -226,7 +249,7 @@
 				margin-top 26px
 			&-images
 				&-image
-					flex-basis 100%
+					flex-basis 50%
 			&-desc
 				margin-bottom 40px
 @media(max-width: 600px)

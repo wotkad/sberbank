@@ -56,9 +56,9 @@
 					font-size 14px
 			&-button
 				padding 15px 32px
-				font-family $Bold
+				font-family $Regular
 				color $white
-				font-size 1rem
+				font-size 1.125rem
 				width 65%
 				position relative
 				line-height 26px
@@ -69,14 +69,20 @@
 				background-color $green
 				cursor pointer
 				transition .3s
-				border-left none
-				border-right none
-				border-top none
-				border-bottom 3px solid $green
-				&:hover
-					box-shadow inset 0 0 15px #00ddb5
-					color $white
-					background-color $green
+				border none
+				overflow hidden
+				&:after
+					content: ""
+					position: absolute
+					top -50%
+					left -50%
+					right -50%
+					bottom -50%
+					background linear-gradient(to bottom,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+					transform rotateZ(60deg) translate(-5em,7.5em)
+					opacity 0
+					animation sheens 2.5s infinite
+					z-index 100
 			&-policy
 				width 65%
 				display flex
@@ -143,6 +149,8 @@
 @media(max-width: 991px)
 	.callbackblock
 		padding 35px 0 45px 0
+		width 50%
+		margin 0 auto
 		&__block
 			&-image
 				display none

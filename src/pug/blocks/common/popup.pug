@@ -8,10 +8,12 @@
 			i.fa.fa-phone
 			input(type="tel" name="phone" placeholder="Номер телефона" required="required")
 		button(type="submit").popup__form-button Позвоните мне
-		.popup__form-input
-			input.checkbox(type='checkbox' name='p1' checked="checked")
-			span.checkbox-custom
-			span Соглашаюсь на обработку персональных данных на условиях и для целей, определенных
-				a(target="_blank" href="/files/politics.pdf") политикой конфиденциальности
+		.popup__form-input-policy
+			label.popup__form-input-policy-input
+				input.checkbox(type="checkbox" name="radio-test" required="required" checked)
+				span.checkbox-custom
+			.popup__form-input-policy-text
+				span Соглашаюсь на обработку персональных данных на условиях и для целей, определенных
+					a(target="_blank" href="/files/politics.pdf") политикой конфиденциальности
 		.popup__form-close
 			i.fa.fa-times
