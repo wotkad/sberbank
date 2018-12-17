@@ -1844,7 +1844,7 @@ section {
 @media (max-width: 991px) {
   .callbackblock {
     padding: 35px 0 45px 0;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
   .callbackblock__block-image {
